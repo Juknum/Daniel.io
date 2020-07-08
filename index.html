@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Daniel Nicolier - Acceuil</title>
+    <meta name="description" content="Découvrez mes oeuvres!" />
+    <meta name="keywords" content="Art, Daniel Nicolier">
+    <meta name="theme-color" content="#007444">
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+    <meta property="og:image" content="/image/icon/og.jpg" />
+    <meta property="twitter:image" content="/image/icon/og.jpg"/>
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/css/main.css">
+
+</head>
+<body>
+
+<header>
+</header>
+
+<div class="custom-navbar-wrapper">
+  <nav class="custom-navbar navbar navbar-expand-sm navbar-dark">
+      <span class="navbar-brand">
+          Menu
+      </span>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-label="Menu">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">{% unless layout.lang or layout.lang == 'en' %}{% assign langURL = '' %}{% else %}{% assign langURL = layout.lang | append: '/' %}{% endunless %}
+              <li class="nav-item">
+                  <a class="nav-link" href="/home">Acceuil}}</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/affichage">Affichage</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/contact">Contact</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
+</div>
+
+<main class="container">
+  <p>Container</p>
+</main>
+
+<footer>
+  <p>
+    Footer
+  </p>
+</footer>
+
+</body>
+</html>
