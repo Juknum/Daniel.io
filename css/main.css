@@ -25,6 +25,7 @@ main {
 }
 
 /* Dark colors */
+/*
 ::-webkit-scrollbar{
   width: 17px;
 }
@@ -47,13 +48,7 @@ main {
 .card, .modal-content {
   background: #2D2E32;
 }
-body {
-  background: #141519;
-  color: #fff;
-}
-p {
-  color: rgba(255, 255, 255, .7);
-}
+*/
 .modal-header {
   border-bottom: 1px solid #2D2E32;
 }
@@ -62,41 +57,6 @@ p {
 }
 h2, h3, h4, h5 {
   font-weight: 300;
-}
-
-/* Flexbox */
-.flex-container {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.flex-container > .card {
-  margin: 15px auto;
-}
-
-/* Classes for images next to text */
-.links-image {
-  width: 100%;
-  margin: 0 0 15px 0;
-  border-radius: .25rem;
-}
-.links-image img {
-  border-radius: .25rem;
-}
-@media (min-width: 992px) {
-  .links-image, .links-content {
-    display: inline-block;
-  }
-  .links-image {
-    margin: 0 15px 0 0;
-    width: 500px;
-  }
-  .links-content {
-    width: calc(100% - 545px);
-    vertical-align: top;
-  }
 }
 
 /* navbar */
@@ -128,86 +88,4 @@ h2, h3, h4, h5 {
 }
 .card[data-model] {
   cursor: pointer;
-}
-
-/* Modal */
-#modalCanvas {
-  width: 100% !important;
-  height: auto !important;
-  border-radius: .3rem;
-}
-
-/* Cookie Banner */
-.cookie-container {
-  position: fixed;
-  bottom: -100%;
-  left: 0;
-  right: 0;
-  background: #2f3640;
-  color: #f5f6fa;
-  padding: 0 32px;
-  padding-top: 16px;
-  z-index: 1050;
-  transition: 400ms;
-}
-
-.cookie-container.active {
-  bottom: 0;
-}
-
-.cookie-container a {
-  color: #f5f6fa;
-}
-
-.cookie-btn {
-  background: #28A745;
-  border: 0;
-  color: #f5f6fa;
-  padding: 12px 32px;
-  font-size: 18px;
-  margin-bottom: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-/* Article */
-.display-article {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  text-shadow: 2px 2px 20px #000;
-}
-
-/* Credits */
-.credits-author {
-  width: 25px;
-  margin-right: 6px;
-}
-
-/* Table */
-.table-tittle {
-  background-color: #141519;
-  text-align: center;
-}
-
-/* Form control in credits (search bar) */
-.search-bar {
-  background-color: #0e0e0e;
-  border: 1px solid #000;
-  color: #fff;
-}
-.form-control:focus {
-  background-color: #1e1e1e;
-  border: 1px solid #000;
-  color: #fff;
-}
-
-.detailed {
-  display: none;
-}
-@media only screen and (min-width: 768px) {
-  .detailed {
-    display: table-cell;
-  }
 }
