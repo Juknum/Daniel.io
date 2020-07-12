@@ -5,6 +5,7 @@ html {
 header, footer {
   padding: 2rem 1rem;
   text-align: center;
+  background-color: #E9ECEF;
 }
 main {
   margin: 30px 0;
@@ -22,6 +23,9 @@ main {
 .carousel-inner img {
   width: 100%;
   height: 100%;
+}
+.carousel-item {
+  background-color: #E9ECEF;
 }
 
 /* Dark colors */
