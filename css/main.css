@@ -98,3 +98,26 @@ h2, h3, h4, h5 {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+
+/* Classes for images next to text */
+.links-image {
+  width: 100%;
+  margin: 0 0 15px 0;
+  border-radius: .25rem;
+}
+.links-image img {
+  border-radius: .25rem;
+}
+@media (min-width: 992px) {
+  .links-image, .links-content {
+    display: inline-block;
+  }
+  .links-image {
+    margin: 0 15px 0 0;
+    width: 500px;
+  }
+  .links-content {
+    width: calc(100% - 545px);
+    vertical-align: top;
+  }
+}
