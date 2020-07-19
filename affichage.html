@@ -19,7 +19,7 @@ description: Découvrez l'ensemble de mes oeuvres!
             <h4 class="card-title">{{ imageName[0] }}</h4>
             <div class="row">
               <div class="col">
-                <p align="left"><small>Dimension : {{ imageName[1] }}</small></p>
+                <p align="left"><small>Dimension : {{ imageName[1] }} cm</small></p>
               </div>
               <div class="col">
                 <p align="right"><small>{{ imageName[2] }} € <br></small></p>
@@ -39,19 +39,27 @@ description: Découvrez l'ensemble de mes oeuvres!
   </div>
 
   <!-- images_M -->
-  <div class="col">
+    <div class="col">
     {%- for image in site.static_files -%}
       {%- if image.path contains 'image/affichage/images_M' -%}
+
+      {%- assign imageName = image.basename | split: " - " -%}
+
         <div class="card">
           <img class="card-img-top img-thumbnail" style="width:100%" src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.name | default: Image_M }}">
           <div class="card-body">
-            <h4 class="card-title">{{ image.basename }}</h4>
+            <h4 class="card-title">{{ imageName[0] }}</h4>
             <div class="row">
               <div class="col">
-                <p align="left"><small><a href="{{ site.baseurl }}{{ image.path }}" class="btn btn-info" role="button">Voir</a></small></p>
+                <p align="left"><small>Dimension : {{ imageName[1] }} cm</small></p>
               </div>
               <div class="col">
-                <p align="right"><small>{{ image.basename }} €</small></p>
+                <p align="right"><small>{{ imageName[2] }} € <br></small></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <a class="btn btn-info btn-block btn-sm" role="button" href="{{ site.baseurl}}{{ image.path }}">Voir</a>
               </div>
             </div>
           </div>
@@ -63,19 +71,27 @@ description: Découvrez l'ensemble de mes oeuvres!
   </div>
 
   <!-- images_R -->
-  <div class="col">
+    <div class="col">
     {%- for image in site.static_files -%}
       {%- if image.path contains 'image/affichage/images_R' -%}
+
+      {%- assign imageName = image.basename | split: " - " -%}
+
         <div class="card">
           <img class="card-img-top img-thumbnail" style="width:100%" src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.name | default: Image_R }}">
           <div class="card-body">
-            <h4 class="card-title">{{ image.basename }}</h4>
+            <h4 class="card-title">{{ imageName[0] }}</h4>
             <div class="row">
               <div class="col">
-                <p align="left"><small><a href="{{ site.baseurl }}{{ image.path }}" class="btn btn-info" role="button">Voir</a></small></p>
+                <p align="left"><small>Dimension : {{ imageName[1] }} cm</small></p>
               </div>
               <div class="col">
-                <p align="right"><small>{{ image.basename }} €</small></p>
+                <p align="right"><small>{{ imageName[2] }} € <br></small></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <a class="btn btn-info btn-block btn-sm" role="button" href="{{ site.baseurl}}{{ image.path }}">Voir</a>
               </div>
             </div>
           </div>
