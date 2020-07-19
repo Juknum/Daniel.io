@@ -8,18 +8,18 @@ description: Découvrez l'ensemble de mes oeuvres!
 
   <!-- _images_L -->
   <div class="col">
-    {% for image in site.images_L %}
-      {% if image.extname == 'jpg' %}
+    {% for image in site.static_files %}
+      {% if image.path contains 'image/affichage/images_L' %}
         <div class="card">
-          <img class="card-img-top img-thumbnail" style="width:100%" src="{{ file.url }}" alt="{{ file.name | default: Image_L }}">
+          <img class="card-img-top img-thumbnail" style="width:100%" src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.name | default: Image_L }}">
           <div class="card-body">
-            <h4 class="card-title">{{ file.name }}</h4>
+            <h4 class="card-title">{{ image.name }}</h4>
             <div class="row">
               <div class="col">
-                <p align="left"><small><a href="{{ file.url }}" class="btn btn-info" role="button">Voir</a></small></p>
+                <p align="left"><small><a href="{{ site.baseurl }}{{ image.path }}" class="btn btn-info" role="button">Voir</a></small></p>
               </div>
               <div class="col">
-                <p align="right"><small>X €</small></p>
+                <p align="right"><small>{{ image.name }} €</small></p>
               </div>
             </div>
           </div>
