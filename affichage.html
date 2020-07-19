@@ -11,7 +11,7 @@ description: Découvrez l'ensemble de mes oeuvres!
     {% for image in site.static_files %}
       {% if image.path contains 'image/affichage/images_L' %}
 
-      {{% assign imageName = image.basename | split: " - " %}}
+      {% assign imageName = image.basename | split: " - " %}
 
         <div class="card">
           <img class="card-img-top img-thumbnail" style="width:100%" src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.name | default: Image_L }}">
