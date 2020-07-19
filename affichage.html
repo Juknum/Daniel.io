@@ -6,20 +6,20 @@ description: Découvrez l'ensemble de mes oeuvres!
 
 <div class="row">
 
-  <!-- _images_L -->
+  <!-- images_L -->
   <div class="col">
     {% for image in site.static_files %}
       {% if image.path contains 'image/affichage/images_L' %}
         <div class="card">
           <img class="card-img-top img-thumbnail" style="width:100%" src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.name | default: Image_L }}">
           <div class="card-body">
-            <h4 class="card-title">{{ image.name }}</h4>
+            <h4 class="card-title">{{ image.name | remove: '.jpg' }}</h4>
             <div class="row">
               <div class="col">
                 <p align="left"><small><a href="{{ site.baseurl }}{{ image.path }}" class="btn btn-info" role="button">Voir</a></small></p>
               </div>
               <div class="col">
-                <p align="right"><small>{{ image.name }} €</small></p>
+                <p align="right"><small>{{ image.name | remove: '.jpg' }} €</small></p>
               </div>
             </div>
           </div>
@@ -28,144 +28,48 @@ description: Découvrez l'ensemble de mes oeuvres!
     {% endfor %}
   </div>
 
-  <!--
-	<-- Left Column --
-	<div class="col">
-      <div class="card">
-        <img class="card-img-top img-thumbnail" src="{{ site.baseurl }}/image/affichage/IMG_4889.jpg" alt="Tableau n°1" style="width:100%">
-        <div class="card-body">
-          <h4 class="card-title">Nom Oeuvre</h4>
-          <div class="row">
-          	<div class="col">
-            <p align="left"><small><a href="{{ site.baseurl }}/image/affichage/IMG_4889.jpg" class="btn btn-info" role="button">Voir</a></small></p>
-            </div>
-            <div class="col">
-            <p align="right"><small>X €</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <br>
-
-      <div class="card">
-        <img class="card-img-top img-thumbnail" src="{{ site.baseurl }}/image/affichage/IMG_5613.jpg" alt="Tableau n°6" style="width:100%">
-        <div class="card-body">
-          <h4 class="card-title">Nom Oeuvre</h4>
-          <div class="row">
-          	<div class="col">
-            <p align="left"><small><a href="{{ site.baseurl }}/image/affichage/IMG_5613.jpg" class="btn btn-info" role="button">Voir</a></small></p>
-            </div>
-            <div class="col">
-            <p align="right"><small>X €</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <br>
-
-      <div class="card">
-        <img class="card-img-top img-thumbnail" src="{{ site.baseurl }}/image/affichage/IMG_5614.jpg" alt="Tableau n°7" style="width:100%">
-        <div class="card-body">
-          <h4 class="card-title">Nom Oeuvre</h4>
-          <div class="row">
-          	<div class="col">
-            <p align="left"><small><a href="{{ site.baseurl }}/image/affichage/IMG_5614.jpg" class="btn btn-info" role="button">Voir</a></small></p>
-            </div>
-            <div class="col">
-            <p align="right"><small>X €</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
-  </div>
-
-	<-- Middle Column --
+  <!-- images_M -->
   <div class="col">
-      <div class="card">
-        <img class="card-img-top img-thumbnail" src="{{ site.baseurl }}/image/affichage/IMG_4892.jpg" alt="Tableau n°2" style="width:100%">
-        <div class="card-body">
-          <h4 class="card-title">Nom Oeuvre</h4>
-          <div class="row">
-          	<div class="col">
-            <p align="left"><small><a href="{{ site.baseurl }}/image/affichage/IMG_4892.jpg" class="btn btn-info" role="button">Voir</a></small></p>
-            </div>
-            <div class="col">
-            <p align="right"><small>X €</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <br>
-
-      <div class="card">
-        <img class="card-img-top img-thumbnail" src="{{ site.baseurl }}/image/affichage/IMG_5606.jpg" alt="Tableau n°5" style="width:100%">
-        <div class="card-body">
-          <h4 class="card-title">Nom Oeuvre</h4>
-          <div class="row">
-          	<div class="col">
-            <p align="left"><small><a href="{{ site.baseurl }}/image/affichage/IMG_5606.jpg" class="btn btn-info" role="button">Voir</a></small></p>
-            </div>
-            <div class="col">
-            <p align="right"><small>X €</small></p>
+    {% for image in site.static_files %}
+      {% if image.path contains 'image/affichage/images_M' %}
+        <div class="card">
+          <img class="card-img-top img-thumbnail" style="width:100%" src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.name | default: Image_M }}">
+          <div class="card-body">
+            <h4 class="card-title">{{ image.name | remove: '.jpg' }}</h4>
+            <div class="row">
+              <div class="col">
+                <p align="left"><small><a href="{{ site.baseurl }}{{ image.path }}" class="btn btn-info" role="button">Voir</a></small></p>
+              </div>
+              <div class="col">
+                <p align="right"><small>{{ image.name | remove: '.jpg' }} €</small></p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <br>
-
-      <div class="card">
-        <img class="card-img-top img-thumbnail" src="{{ site.baseurl }}/image/affichage/IMG_5626.jpg" alt="Tableau n°8" style="width:100%">
-        <div class="card-body">
-          <h4 class="card-title">Nom Oeuvre</h4>
-          <div class="row">
-          	<div class="col">
-            <p align="left"><small><a href="{{ site.baseurl }}/image/affichage/IMG_5626.jpg" class="btn btn-info" role="button">Voir</a></small></p>
-            </div>
-            <div class="col">
-            <p align="right"><small>X €</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
+      {% endif %}
+    {% endfor %}
   </div>
-  
-  <-- Right Column --
+
+  <!-- images_R -->
   <div class="col">
-      <div class="card">
-        <img class="card-img-top img-thumbnail" src="{{ site.baseurl }}/image/affichage/IMG_5599.jpg" alt="Tableau n°3" style="width:100%">
-        <div class="card-body">
-          <h4 class="card-title">Nom Oeuvre</h4>
-          <div class="row">
-          	<div class="col">
-            <p align="left"><small><a href="{{ site.baseurl }}/image/affichage/IMG_5599.jpg" class="btn btn-info" role="button">Voir</a></small></p>
-            </div>
-            <div class="col">
-            <p align="right"><small>X €</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <br>
-
-      <div class="card">
-        <img class="card-img-top img-thumbnail" src="{{ site.baseurl }}/image/affichage/IMG_5602.jpg" alt="Tableau n°4" style="width:100%">
-        <div class="card-body">
-          <h4 class="card-title">Nom Oeuvre</h4>
-          <div class="row">
-          	<div class="col">
-            <p align="left"><small><a href="{{ site.baseurl }}/image/affichage/IMG_5602.jpg" class="btn btn-info" role="button">Voir</a></small></p>
-            </div>
-            <div class="col">
-            <p align="right"><small>X €</small></p>
+    {% for image in site.static_files %}
+      {% if image.path contains 'image/affichage/images_R' %}
+        <div class="card">
+          <img class="card-img-top img-thumbnail" style="width:100%" src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.name | default: Image_R }}">
+          <div class="card-body">
+            <h4 class="card-title">{{ image.name | remove: '.jpg' }}</h4>
+            <div class="row">
+              <div class="col">
+                <p align="left"><small><a href="{{ site.baseurl }}{{ image.path }}" class="btn btn-info" role="button">Voir</a></small></p>
+              </div>
+              <div class="col">
+                <p align="right"><small>{{ image.name | remove: '.jpg' }} €</small></p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      {% endif %}
+    {% endfor %}
   </div>
-  -->
+
 </div>
