@@ -8,10 +8,10 @@ description: Découvrez l'ensemble de mes oeuvres!
 
   <!-- images_L -->
   <div class="col">
-    {% for image in site.static_files %}
-      {% if image.path contains 'image/affichage/images_L' %}
+    {%- for image in site.static_files -%}
+      {%- if image.path contains 'image/affichage/images_L' -%}
 
-      {% assign imageName = image.basename | split: " - " %}
+      {%- assign imageName = image.basename | split: " - " -%}
 
         <div class="card">
           <img class="card-img-top img-thumbnail" style="width:100%" src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.name | default: Image_L }}">
@@ -26,20 +26,22 @@ description: Découvrez l'ensemble de mes oeuvres!
               </div>
             </div>
             <div class="row">
-              <a class="btn btn-info btn-block" role="button" href="{{ site.baseurl}}{{ image.path }}">Voir</a>
+              <div class="col">
+                <a class="btn btn-info btn-block btn-sm" role="button" href="{{ site.baseurl}}{{ image.path }}">Voir</a>
+              </div>
             </div>
           </div>
         </div>
 
         <br>
-      {% endif %}
-    {% endfor %}
+      {%- endif -%}
+    {%- endfor -%}
   </div>
 
   <!-- images_M -->
   <div class="col">
-    {% for image in site.static_files %}
-      {% if image.path contains 'image/affichage/images_M' %}
+    {%- for image in site.static_files -%}
+      {%- if image.path contains 'image/affichage/images_M' -%}
         <div class="card">
           <img class="card-img-top img-thumbnail" style="width:100%" src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.name | default: Image_M }}">
           <div class="card-body">
@@ -56,14 +58,14 @@ description: Découvrez l'ensemble de mes oeuvres!
         </div>
 
         <br>
-      {% endif %}
-    {% endfor %}
+      {%- endif -%}
+    {%- endfor -%}
   </div>
 
   <!-- images_R -->
   <div class="col">
-    {% for image in site.static_files %}
-      {% if image.path contains 'image/affichage/images_R' %}
+    {%- for image in site.static_files -%}
+      {%- if image.path contains 'image/affichage/images_R' -%}
         <div class="card">
           <img class="card-img-top img-thumbnail" style="width:100%" src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.name | default: Image_R }}">
           <div class="card-body">
@@ -80,8 +82,8 @@ description: Découvrez l'ensemble de mes oeuvres!
         </div>
 
         <br>
-      {% endif %}
-    {% endfor %}
+      {%- endif -%}
+    {%- endfor -%}
   </div>
 
 </div>
