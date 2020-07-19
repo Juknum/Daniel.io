@@ -19,11 +19,13 @@ description: Découvrez l'ensemble de mes oeuvres!
                 <p align="left"><small><a href="{{ site.baseurl }}{{ image.path }}" class="btn btn-info" role="button">Voir</a></small></p>
               </div>
               <div class="col">
-                <p align="right"><small>{{ image.name | remove: '.jpg' }} €</small></p>
+                <p align="right"><small>{{ image.size }} €</small></p>
               </div>
             </div>
           </div>
         </div>
+
+        <br>
       {% endif %}
     {% endfor %}
   </div>
@@ -46,6 +48,8 @@ description: Découvrez l'ensemble de mes oeuvres!
             </div>
           </div>
         </div>
+
+        <br>
       {% endif %}
     {% endfor %}
   </div>
@@ -68,6 +72,8 @@ description: Découvrez l'ensemble de mes oeuvres!
             </div>
           </div>
         </div>
+
+        <br>
       {% endif %}
     {% endfor %}
   </div>
