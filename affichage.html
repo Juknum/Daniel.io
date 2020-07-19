@@ -6,7 +6,30 @@ description: Découvrez l'ensemble de mes oeuvres!
 
 <div class="row">
 
-	<!-- Left Column -->
+  <!-- _images_L -->
+  <div class="col">
+    {% for image in site.images_L %}
+      {% if image.extname == 'jpg' %}
+        <div class="card">
+          <img class="card-img-top img-thumbnail" style="width:100%" src="{{ file.url }}" alt="{{ file.name | default: Image_L }}">
+          <div class="card-body">
+            <h4 class="card-title">{{ file.name }}</h4>
+            <div class="row">
+              <div class="col">
+                <p align="left"><small><a href="{{ file.url }}" class="btn btn-info" role="button">Voir</a></small></p>
+              </div>
+              <div class="col">
+                <p align="right"><small>X €</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <!--
+	<-- Left Column --
 	<div class="col">
       <div class="card">
         <img class="card-img-top img-thumbnail" src="{{ site.baseurl }}/image/affichage/IMG_4889.jpg" alt="Tableau n°1" style="width:100%">
@@ -56,10 +79,10 @@ description: Découvrez l'ensemble de mes oeuvres!
           </div>
         </div>
       </div>
-    </div>
+  </div>
 
-	<!-- Middle Column -->
-    <div class="col">
+	<-- Middle Column --
+  <div class="col">
       <div class="card">
         <img class="card-img-top img-thumbnail" src="{{ site.baseurl }}/image/affichage/IMG_4892.jpg" alt="Tableau n°2" style="width:100%">
         <div class="card-body">
@@ -108,10 +131,10 @@ description: Découvrez l'ensemble de mes oeuvres!
           </div>
         </div>
       </div>
-    </div>
-    
-    <!-- Right Column -->
-    <div class="col">
+  </div>
+  
+  <-- Right Column --
+  <div class="col">
       <div class="card">
         <img class="card-img-top img-thumbnail" src="{{ site.baseurl }}/image/affichage/IMG_5599.jpg" alt="Tableau n°3" style="width:100%">
         <div class="card-body">
@@ -143,6 +166,6 @@ description: Découvrez l'ensemble de mes oeuvres!
           </div>
         </div>
       </div>
-    </div>
-
+  </div>
+  -->
 </div>

@@ -5,3 +5,8 @@ defaults:
       path: ""
     values:
       layout: "default"
+
+collections:
+  - images_L
+  - images_M
+  - images_R
