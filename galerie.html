@@ -1,6 +1,6 @@
 ---
-title: Affichage
-separatedTitle: Affi&shy;chage
+title: Galerie
+separatedTitle: Gal&shy;erie
 description: Découvrez l'ensemble de mes oeuvres!
 ---
 <style>
@@ -17,7 +17,7 @@ description: Découvrez l'ensemble de mes oeuvres!
   <!-- images_L -->
   <div class="col">
     {%- for image in site.static_files -%}
-      {%- if image.path contains 'image/affichage/images_L' -%}
+      {%- if image.path contains 'image/galerie/images_L' -%}
 
       {%- assign imageName = image.basename | split: " - " -%}
 
@@ -49,7 +49,7 @@ description: Découvrez l'ensemble de mes oeuvres!
   <!-- images_M -->
     <div class="col">
     {%- for image in site.static_files -%}
-      {%- if image.path contains 'image/affichage/images_M' -%}
+      {%- if image.path contains 'image/galerie/images_M' -%}
 
       {%- assign imageName = image.basename | split: " - " -%}
 
@@ -81,7 +81,7 @@ description: Découvrez l'ensemble de mes oeuvres!
   <!-- images_R -->
     <div class="col">
     {%- for image in site.static_files -%}
-      {%- if image.path contains 'image/affichage/images_R' -%}
+      {%- if image.path contains 'image/galerie/images_R' -%}
 
       {%- assign imageName = image.basename | split: " - " -%}
 
