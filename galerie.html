@@ -3,19 +3,11 @@ title: Galerie
 separatedTitle: Gal&shy;erie
 description: Découvrez l'ensemble de mes oeuvres!
 ---
-<style>
-  @media (max-width: 576px) {
-    .col {
-        flex-basis: auto;
-    }
-  }
-</style>
-
 
 <div class="row">
 
   <!-- images_L -->
-  <div class="col">
+  <div class="col col-flex">
     {%- for image in site.static_files -%}
       {%- if image.path contains 'image/galerie/images_L' -%}
 
@@ -47,7 +39,7 @@ description: Découvrez l'ensemble de mes oeuvres!
   </div>
 
   <!-- images_M -->
-    <div class="col">
+    <div class="col col-flex">
     {%- for image in site.static_files -%}
       {%- if image.path contains 'image/galerie/images_M' -%}
 
@@ -79,7 +71,7 @@ description: Découvrez l'ensemble de mes oeuvres!
   </div>
 
   <!-- images_R -->
-    <div class="col">
+    <div class="col col-flex">
     {%- for image in site.static_files -%}
       {%- if image.path contains 'image/galerie/images_R' -%}
 

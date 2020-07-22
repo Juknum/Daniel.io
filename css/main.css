@@ -17,6 +17,11 @@ main {
     padding: 4rem 2rem;
   }
 }
+@media (max-width: 576px) {
+  .col-flex {
+    flex-basis: auto;
+  }
+}
 
 /* navbar */
 .custom-navbar-wrapper {
